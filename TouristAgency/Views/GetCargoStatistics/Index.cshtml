@@ -1,0 +1,63 @@
+﻿@model IEnumerable<TouristAgency.Models.GetCargoStatistics>
+
+@{
+    ViewData["Title"] = "Cargo Statistics";
+}
+
+<h1>Cargo Statistics</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Number of Flights
+            </th>
+            <th>
+                Number of Cargo Flights
+            </th>
+            <th>
+                Number of Cargo Passenger Flights
+            </th>
+            <th>
+                Total Cargo Weight
+            </th>
+            <th>
+                Total Cargo Weight (Cargo Flights)
+            </th>
+            <th>
+                Total Cargo Weight (Cargo Passenger Flights)
+            </th>
+            <th>
+                Number of Cargo Items
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.num_flights
+                </td>
+                <td>
+                    @item.num_cargo_flights
+                </td>
+                <td>
+                    @item.num_cargo_passenger_flights
+                </td>
+                <td>
+                    @item.total_cargo_weight
+                </td>
+                <td>
+                    @item.total_cargo_weight_cargo_flights
+                </td>
+                <td>
+                    @item.total_cargo_weight_cargo_passenger_flights
+                </td>
+                <td>
+                    @item.num_cargo_items
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

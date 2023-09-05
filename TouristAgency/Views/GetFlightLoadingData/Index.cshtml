@@ -1,0 +1,57 @@
+﻿@model IEnumerable<TouristAgency.Models.GetFlightLoadingData>
+
+@{
+    ViewData["Title"] = "Flight Loading Data";
+}
+
+<h1>Flight Loading Data</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Flight Number
+            </th>
+            <th>
+                Departure Date
+            </th>
+            <th>
+                Arrival Date
+            </th>
+            <th>
+                Number of Seats
+            </th>
+            <th>
+                Total Luggage Weight
+            </th>
+            <th>
+                Total Volumetric Weight
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.flight_number
+                </td>
+                <td>
+                    @item.departure_date
+                </td>
+                <td>
+                    @item.arrival_date
+                </td>
+                <td>
+                    @item.number_of_seats
+                </td>
+                <td>
+                    @item.total_luggage_weight
+                </td>
+                <td>
+                    @item.total_volumetric_weight
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

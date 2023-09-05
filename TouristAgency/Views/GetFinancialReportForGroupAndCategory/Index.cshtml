@@ -1,0 +1,63 @@
+﻿@model IEnumerable<TouristAgency.Models.GetFinancialReportForGroupAndCategory>
+
+@{
+    ViewData["Title"] = "Financial Report for Group and Category";
+}
+
+<h1>Financial Report for Group and Category</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Report ID
+            </th>
+            <th>
+                Report Date
+            </th>
+            <th>
+                Group Name
+            </th>
+            <th>
+                Category Name
+            </th>
+            <th>
+                Total Income
+            </th>
+            <th>
+                Total Expenses
+            </th>
+            <th>
+                Net Profit
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.report_id
+                </td>
+                <td>
+                    @item.report_date
+                </td>
+                <td>
+                    @item.group_name
+                </td>
+                <td>
+                    @item.category_name
+                </td>
+                <td>
+                    @item.total_income
+                </td>
+                <td>
+                    @item.total_expenses
+                </td>
+                <td>
+                    @item.net_profit
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

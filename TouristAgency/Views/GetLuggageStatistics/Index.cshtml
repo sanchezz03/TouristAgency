@@ -1,0 +1,39 @@
+﻿@model IEnumerable<TouristAgency.Models.GetLuggageStatistics>
+
+@{
+    ViewData["Title"] = "Luggage Statistics";
+}
+
+<h1>Luggage Statistics</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Luggage Type
+            </th>
+            <th>
+                Luggage Count
+            </th>
+            <th>
+                Relative Share
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.luggage_type
+                </td>
+                <td>
+                    @item.luggage_count
+                </td>
+                <td>
+                    @item.relative_share
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

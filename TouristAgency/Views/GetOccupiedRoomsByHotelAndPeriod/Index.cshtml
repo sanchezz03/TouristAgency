@@ -1,0 +1,45 @@
+﻿@model IEnumerable<TouristAgency.Models.GetOccupiedRoomsByHotelAndPeriod>
+
+@{
+    ViewData["Title"] = "Occupied Rooms by Hotel and Period";
+}
+
+<h1>Occupied Rooms by Hotel and Period</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Hotel ID
+            </th>
+            <th>
+                Hotel Name
+            </th>
+            <th>
+                Hotel Address
+            </th>
+            <th>
+                Occupied Rooms
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.hotel_id
+                </td>
+                <td>
+                    @item.hotel_name
+                </td>
+                <td>
+                    @item.hotel_address
+                </td>
+                <td>
+                    @item.occupied_rooms
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,33 @@
+﻿@model List<TouristAgency.Models.CalculateTouristRatio>
+
+@{
+    ViewData["Title"] = "Tourist Ratio Calculation";
+}
+
+<h1>Tourist Ratio Calculation</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Leisure Ratio
+            </th>
+            <th>
+                Ratio
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.leisure_ratio
+                </td>
+                <td>
+                    @item.shop_ratio
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

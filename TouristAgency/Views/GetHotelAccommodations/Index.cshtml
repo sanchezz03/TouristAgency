@@ -1,0 +1,75 @@
+﻿@model IEnumerable<TouristAgency.Models.GetHotelAccommodations>
+
+@{
+    ViewData["Title"] = "Hotel Accommodations";
+}
+
+<h1>Hotel Accommodations</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Room Number
+            </th>
+            <th>
+                Room Type
+            </th>
+            <th>
+                Room Price
+            </th>
+            <th>
+                Check-In Date
+            </th>
+            <th>
+                Check-Out Date
+            </th>
+            <th>
+                Tourist ID
+            </th>
+            <th>
+                Hotel ID
+            </th>
+            <th>
+                Hotel Name
+            </th>
+            <th>
+                Category Name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.room_number
+                </td>
+                <td>
+                    @item.room_type
+                </td>
+                <td>
+                    @item.room_price
+                </td>
+                <td>
+                    @item.check_in_date
+                </td>
+                <td>
+                    @item.check_out_date
+                </td>
+                <td>
+                    @item.tourist_id
+                </td>
+                <td>
+                    @item.hotel_id
+                </td>
+                <td>
+                    @item.hotel_name
+                </td>
+                <td>
+                    @item.category_name
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<TouristAgency.Models.GetExpensesIncomesForPeriod>
+
+@{
+    ViewData["Title"] = "Expenses and Incomes for Period";
+}
+
+<h1>Expenses and Incomes for Period</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Record ID
+            </th>
+            <th>
+                Service Name
+            </th>
+            <th>
+                Transaction Date
+            </th>
+            <th>
+                Amount
+            </th>
+            <th>
+                Expense/Income Type
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.record_id
+                </td>
+                <td>
+                    @item.service_name
+                </td>
+                <td>
+                    @item.transaction_date
+                </td>
+                <td>
+                    @item.amount
+                </td>
+                <td>
+                    @item.expense_income_type
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

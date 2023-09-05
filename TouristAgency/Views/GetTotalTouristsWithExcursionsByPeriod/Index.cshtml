@@ -1,0 +1,27 @@
+﻿@model IEnumerable<TouristAgency.Models.GetTotalTouristsWithExcursionsByPeriod>
+
+@{
+    ViewData["Title"] = "Total Tourists with Excursions by Period";
+}
+
+<h1>Total Tourists with Excursions by Period</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Total Tourists with Excursions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.total_tourists_with_excursions
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
